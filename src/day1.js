@@ -19,12 +19,20 @@ for (let i = 0; i < lines.length; i++) {
             continue   
         }
      
+        first = digit
+        last = first
+        break   
+    }
 
-        if (first == undefined)  {
-            first = digit
-        }
+    for (let j = line.length; j > 0; j--) {
+        let digit = parseInt(line[j])
         
+        if (isNaN(digit)) {
+            continue   
+        }
+     
         last = digit
+        break   
     }
 
     p1 += parseInt(first.toString() + last.toString())
@@ -88,8 +96,5 @@ for (let i = 0; i < lines.length; i++) {
  
 }
 
-
-
 console.log("P1 Answer: " + p1)
 console.log("P2 Answer: " + p2)
-
