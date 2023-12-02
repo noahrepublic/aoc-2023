@@ -45,18 +45,6 @@ const lookingFor = [
 
 let p2 = 0
 
-const translations = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9
-]
-
 for (let i = 0; i < lines.length; i++) {
 
     const line = lines[i]
