@@ -1,4 +1,3 @@
-const { CommandInteractionOptionResolver } = require('discord.js');
 const fs = require('fs');
 
 
