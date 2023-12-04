@@ -7,13 +7,12 @@ const split = input.split("\n")
 const lineLength = split[0].trim().length
 
 
-const linesCombined = split.join("").trim()
+const linesCombined = input.split("\n").join("").trim()
 
 const offsets = [ 
     -lineLength - 1, // up left
     -lineLength + 1, // up right
     -lineLength, // up
-    0,
 
     1, // right
     -1, // left
