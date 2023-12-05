@@ -4,11 +4,13 @@ const { off } = require('process');
 const input = fs.readFileSync('src/inputs/day3.txt',  {encoding: 'utf8', flag: 'r'});
 
 const split = input.split("\n")
-const lineLength = split[0].trim().length
+const lineLength = split[0].length
 
 
-const linesCombined = input.split("\n").join("").trim()
+const linesCombined = split.join("").trim()
 
+
+console.log(linesCombined)
 const offsets = [ 
     -lineLength - 1, // up left
     -lineLength + 1, // up right
@@ -59,7 +61,7 @@ for (let i = 0; i < linesCombined.length; i++) {
                 endIndex = j
             }
 
-            const id = `${startIndex}, ${endIndex}`
+            const id = `${startIndex}` + `${endIndex}`
 
             if (seen.has(id)) return
             seen.add(id)
